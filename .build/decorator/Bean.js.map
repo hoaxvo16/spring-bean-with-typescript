@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../decorator/Bean.ts"],
+  "sourcesContent": ["import { IOCContainer } from \"../ioc/IOCContainer\";\n\nexport function Bean(object: any) {\n  console.log(\"Constructor of bean: \", object.name, \" run\")\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAEO,cAAc,QAAa;AAChC,UAAQ,IAAI,yBAAyB,OAAO,MAAM;AAAA;",
+  "names": []
+}

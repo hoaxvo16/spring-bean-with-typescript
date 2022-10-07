@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import { JSONPlaceHolderService } from \"./beans/JSONPlaceHolderService\";\nimport { IOCContainer } from \"./ioc/IOCContainer\";\n\nclass SeaApp {\n  private service: JSONPlaceHolderService = IOCContainer.getBean(JSONPlaceHolderService);\n  main() {\n    console.log(this.service.getTodo());\n  }\n}\n\nclass MountainApp {\n  private service: JSONPlaceHolderService = IOCContainer.getBean(JSONPlaceHolderService);\n  main() {\n    console.log(this.service.getTodo());\n  }\n}\n\n\nconst seaApp = new SeaApp();\n\nconst mountainApp = new MountainApp();\n\n\nseaApp.main();\n\nmountainApp.main();"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,oCAAuC;AACvC,0BAA6B;AAE7B,aAAa;AAAA,EACH,UAAkC,iCAAa,QAAQ;AAAA,EAC/D,OAAO;AACL,YAAQ,IAAI,KAAK,QAAQ;AAAA;AAAA;AAI7B,kBAAkB;AAAA,EACR,UAAkC,iCAAa,QAAQ;AAAA,EAC/D,OAAO;AACL,YAAQ,IAAI,KAAK,QAAQ;AAAA;AAAA;AAK7B,MAAM,SAAS,IAAI;AAEnB,MAAM,cAAc,IAAI;AAGxB,OAAO;AAEP,YAAY;",
+  "names": []
+}

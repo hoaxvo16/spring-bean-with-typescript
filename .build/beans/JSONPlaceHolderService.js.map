@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../beans/JSONPlaceHolderService.ts"],
+  "sourcesContent": ["import { Bean } from \"../decorator/Bean\";\n\n@Bean\nclass JSONPlaceHolderService {\n  public getTodo() {\n    return \"Todo resource\"\n  }\n}\n\nexport { JSONPlaceHolderService };"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAqB;AAGrB,mCAA6B;AAAA,EACpB,UAAU;AACf,WAAO;AAAA;AAAA;AAFX;AAAA,EADC;AAAA,GACD;",
+  "names": []
+}

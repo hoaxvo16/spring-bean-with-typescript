@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../ioc/IOCContainer.ts"],
+  "sourcesContent": ["export class IOCContainer {\n\n  private static beans: Map<string, any> = new Map();\n\n  public static injectBean(beanName: string, instance: any) {\n    this.beans.set(beanName, instance);\n  }\n\n  public static getBean(object: any): any {\n    const beanName = object.name;\n    if (this.beans.has(beanName)) {\n      console.log(\"Found bean: \", beanName)\n      return this.beans.get(beanName);\n    }\n    console.log(\"Create new bean: \", beanName)\n    const instance = new object();\n    this.injectBean(beanName, instance);\n    return instance;\n  }\n\n\n  public static deleteBean(beanName: string) {\n    this.beans.delete(beanName);\n  }\n\n  public static getBeans() {\n    return this.beans;\n  }\n\n\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,mBAAmB;AAAA,SAET,QAA0B,IAAI;AAAA,SAE/B,WAAW,UAAkB,UAAe;AACxD,SAAK,MAAM,IAAI,UAAU;AAAA;AAAA,SAGb,QAAQ,QAAkB;AACtC,UAAM,WAAW,OAAO;AACxB,QAAI,KAAK,MAAM,IAAI,WAAW;AAC5B,cAAQ,IAAI,gBAAgB;AAC5B,aAAO,KAAK,MAAM,IAAI;AAAA;AAExB,YAAQ,IAAI,qBAAqB;AACjC,UAAM,WAAW,IAAI;AACrB,SAAK,WAAW,UAAU;AAC1B,WAAO;AAAA;AAAA,SAIK,WAAW,UAAkB;AACzC,SAAK,MAAM,OAAO;AAAA;AAAA,SAGN,WAAW;AACvB,WAAO,KAAK;AAAA;AAAA;",
+  "names": []
+}
